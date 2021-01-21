@@ -189,6 +189,12 @@ public class UCrop {
         return mCropIntent;
     }
 
+    public Intent getIntent(@NonNull Context context, Class<?> activityClass) {
+        mCropIntent.setClass(context, activityClass);
+        mCropIntent.putExtras(mCropOptionsBundle);
+        return mCropIntent;
+    }
+
     /**
      * Get Fragment {@link UCropFragment}
      *
